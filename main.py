@@ -2,7 +2,7 @@ from Flows import QaBot
 import pandas as pd
 
 embedding_name = "BAAI/bge-small-en-v1.5"
-google_api ="AIzaSyCvgEfXtii7hpQkHXtTyYCRmAfMoktFrPQ"
+google_api ="Your API here"
 llm_name = "gemini-2.5-pro-exp-03-25"
 
 data = {
