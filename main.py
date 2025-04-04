@@ -1,8 +1,8 @@
-from Flows import QaBot
+from Flows import Bots
 import pandas as pd
 
 embedding_name = "BAAI/bge-small-en-v1.5"
-google_api ="Your API here"
+google_api ="AIzaSyCvgEfXtii7hpQkHXtTyYCRmAfMoktFrPQ"
 llm_name = "gemini-2.5-pro-exp-03-25"
 
 data = {
@@ -23,6 +23,12 @@ data = {
 }
 
 df = pd.DataFrame(data)
+texts = [f"Course ID: {row[0]}\nTitle: {row[1]}\nDescription: {row[2]}\nDuration: {row[3]}.\tCareer Paths: {row[4]}\nPrerequisites: {row[5]}\n" 
+         for row in df.values]
 
-qabot = QaBot.QABot(embedding_name, google_api, llm_name, df)
-print(qabot.recommend_courses("I want to learn data science"))
+
+bot = Bots.QABot(embedding_name, google_api, llm_name,texts)
+query = input("Enter your query: ")
+while query != 'n':
+    print(bot.answer_course_question(query))
+    query = input("Enter your query: ")
