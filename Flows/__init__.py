@@ -1,1 +1,1 @@
-from .QaBot import QABot
+from .Bots import RecommendBot, QABot
