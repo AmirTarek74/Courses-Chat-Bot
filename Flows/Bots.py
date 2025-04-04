@@ -1,6 +1,5 @@
 from langchain.chains import RetrievalQA, LLMChain, SequentialChain
 from langchain.prompts import PromptTemplate
-from langchain_community.document_loaders import DataFrameLoader
 from langchain_community.vectorstores import FAISS
 from dotenv import load_dotenv
 from models.models import Models
