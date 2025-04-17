@@ -7,7 +7,7 @@ warnings.filterwarnings("ignore", category=UserWarning)  # Hide Python warnings
 
 sys.stdout.reconfigure(encoding='utf-8')
 embedding_name = "BAAI/bge-small-en-v1.5"
-google_api ="AIzaSyCPRJ8mOV89kYvSBIAtI4U0I4Mh2NaCUrE"
+google_api ="YOUR_API_KEY"
 llm_name = "gemini-2.5-pro-exp-03-25"
 
 df = pd.read_csv('data.csv', encoding='utf-8')
