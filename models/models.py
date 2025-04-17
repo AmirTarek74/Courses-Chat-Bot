@@ -1,6 +1,6 @@
 import os
 
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 
 from langchain_google_genai import GoogleGenerativeAI
 
@@ -10,5 +10,5 @@ class Models:
         self.gemini_api_key = os.getenv("GEMINI_API_KEY")
         #genai.configure(api_key=self.gemini_api_key)
 
-        self.llm = GoogleGenerativeAI(model=llm_model, google_api_key=self.gemini_api_key)
+        self.llm = GoogleGenerativeAI(model=llm_model, google_api_key=self.gemini_api_key, verbose=False)
         self.embdding_model = HuggingFaceEmbeddings(model_name=embedding_name)
